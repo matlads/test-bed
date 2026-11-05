@@ -19,7 +19,7 @@ jobs:
       - name: Install PHP
         run: apt-get install --yes php php-xml php-curl php-mbstring
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
@@ -51,7 +51,7 @@ jobs:
         tools: composer
       env:
         fail-fast: true
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
